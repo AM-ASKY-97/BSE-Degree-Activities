@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Vue JS CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    
+    <h1 style="border: 1px solid black; background-color:green; width:30%; text-align:center">Semester 1 Result Sheet</h1>
+
+   <div id="app">
+        <div class="main" style="display:flex; line-height: 35px;">
+            <div class="left" style="width: 200px">
+                <div><input type="text" value="EEI3346 : " disabled></div>
+                <div><input type="text" value="EEI3262 : " disabled></div>
+                <div><input type="text" value="EEI3266 : " disabled></div>
+                <div><input type="text" value="AGM3203 : " disabled></div>
+                <div><input type="text" value="MHZ3459 : " disabled></div>
+
+            </div>
+
+            <div class="right">
+            
+                    <div><input type="number" name="EEI3346" v-model.number="EEI3346" style="width:60px"></div>
+                    <div><input type="number" name="EEI3262" v-model.number="EEI3262" style="width:60px"></div>
+                    <div><input type="number" name="EEI3266" v-model.number="EEI3266" style="width:60px"></div>
+                    <div><input type="number" name="AGM3203" v-model.number="AGM3203" style="width:60px"></div>
+                    <div><input type="number" name="MHZ3459" v-model.number="MHZ3459" style="width:60px"></div>
+            </div>
+        </div>
+
+        <div>
+            <h1 style="border: 1px solid black;  width:30%;">Total : {{result}}, Average :  {{result/5}}</h1>
+        </div>
+   </div>
+
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                EEI3346: 0,
+                EEI3262: 0,
+                EEI3266: 0,
+                AGM3203: 0,
+                MHZ3459: 0,
+            },
+            computed: {
+                result() {
+                    return parseInt(this.EEI3346) + parseInt(this.EEI3262) + parseInt(this.EEI3266) + parseInt(this.AGM3203) + parseInt(this.MHZ3459);
+                },
+            }
+        });
+    </script>
+
+</body>
+</html>

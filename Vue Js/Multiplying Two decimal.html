@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <!--Vue JS CDN-->
+     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+
+    <h1 style="border: 1px solid black; background-color:green; width:30%; text-align:center">Multiplying Two decimal</h1>
+
+    <div id="app">
+         <div class="main" style="display:flex; line-height: 35px;">
+             <div class="left" style="width: 150px">
+                 <div><label for="">Enter Number 01 : </label></div>
+                 <div><label for="">Enter Number 02 : </label></div>
+             </div>
+ 
+             <div class="right">
+             
+                     <div><input type="number" v-model.number="number1"  style="width:60px"></div>
+                     <div><input type="number" v-model.number="number2" style="width:60px"></div>
+             </div>
+         </div>
+ 
+         <div>
+             <h1>Total : {{result}}</h1>
+         </div>
+    </div>
+
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                number1: 0,
+                number2: 0,
+            },
+            computed: {
+                result() {
+                    return parseInt(this.number1) * parseInt(this.number2);
+                },
+            }
+        });
+    </script>
+    
+</body>
+</html>
