@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+E:\Important Docs\OUSL\SEM - 01\EEI-3262 (OOP)\LAP Test\.metadata\.plugins\org.eclipse.jdt.core
+3588439872.index
+1865797976.index
+1290432250.index
+2732855254.index
